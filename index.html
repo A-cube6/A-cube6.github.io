@@ -1,68 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Professional Website Template</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
+	<title>Styled HTML Page</title>
+	<style>
+		.card {
+  perspective: 1000px; /* set the perspective of the 3D space */
+  position: relative; /* make the container a positioning context */
+  height: 200px; /* set the height of the card */
+  width: 300px; /* set the width of the card */
+  border-radius: 20px; /* set the border radius to create curved edges */
+  border: 8px solid #000; /* set the border width and color */
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3); /* add a shadow to create a 3D effect */
+  transform: rotate(-2deg); /* rotate the box slightly to enhance the 3D effect */
+  padding: 20px; /* add some padding to the box content */
+}
+
+.front, .back {
+  position: absolute; /* position the front and back sides */
+  height: 100%; /* set the height to fill the container */
+  width: 100%; /* set the width to fill the container */
+  backface-visibility: hidden; /* hide the backface of the elements */
+  transition: transform 0.6s ease-in-out; /* add a transition effect */
+}
+
+.front {
+  transform: rotateY(0deg); /* set the initial state of the front side */
+}
+
+.back {
+  transform: rotateY(180deg); /* set the initial state of the back side */
+}
+
+.card:hover .front {
+  transform: rotateY(180deg); /* flip the card to show the back side on hover */
+}
+
+.card:hover .back {
+  transform: rotateY(0deg); /* flip the card to show the front side on hover */
+}
+
+	</style>
 </head>
 <body>
-	<header>
-		<nav>
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About Us</a></li>
-				<li><a href="#">Services</a></li>
-				<li><a href="#">Portfolio</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
-		</nav>
-		<h1>Professional Website Template</h1>
-		<p>We provide high-quality web design and development services to help your business succeed online.</p>
-		<a href="#" class="btn">Learn More</a>
-	</header>
-	<section class="services">
-		<h2>Our Services</h2>
-		<div class="service">
-			<i class="fas fa-paint-brush"></i>
-			<h3>Web Design</h3>
-			<p>We create beautiful, responsive websites that look great on any device.</p>
-		</div>
-		<div class="service">
-			<i class="fas fa-code"></i>
-			<h3>Web Development</h3>
-			<p>We develop custom websites and web applications tailored to your business needs.</p>
-		</div>
-		<div class="service">
-			<i class="fas fa-chart-line"></i>
-			<h3>Digital Marketing</h3>
-			<p>We help you reach more customers and grow your business with effective digital marketing strategies.</p>
-		</div>
-	</section>
-	<section class="portfolio">
-		<h2>Our Portfolio</h2>
-		<div class="gallery">
-			<a href="#"><img src="img/portfolio-1.jpg" alt="Portfolio Item 1"></a>
-			<a href="#"><img src="img/portfolio-2.jpg" alt="Portfolio Item 2"></a>
-			<a href="#"><img src="img/portfolio-3.jpg" alt="Portfolio Item 3"></a>
-			<a href="#"><img src="img/portfolio-4.jpg" alt="Portfolio Item 4"></a>
-			<a href="#"><img src="img/portfolio-5.jpg" alt="Portfolio Item 5"></a>
-			<a href="#"><img src="img/portfolio-6.jpg" alt="Portfolio Item 6"></a>
-		</div>
-	</section>
-	<section class="contact">
-		<h2>Contact Us</h2>
-		<form action="#" method="post">
-			<label for="name">Name:</label>
-			<input type="text" id="name" name="name" required>
-			<label for="email">Email:</label>
-			<input type="email" id="email" name="email" required>
-			<label for="message">Message:</label>
-			<textarea id="message" name="message" required></textarea>
-			<button type="submit" class="btn">Send Message</button>
-		</form>
-	</section>
-	<footer>
-		<p>&copy; 2023 Professional Website Template. All rights reserved.</p>
-	</footer>
+    <div class="card">
+  <div class="front">
+    <h1>Welcome to my styled page!</h1>
+  </div>
+  <div class="back">
+    <p>This is an example of an HTML page with some CSS styling applied to it. The background color of the page is light gray, the heading is centered and styled with a dark gray color, and the paragraph text is formatted with a slightly lighter gray color, larger font size, and a line height of 1.5 to improve readability. The paragraph text is also centered on the page and constrained to a maximum width of 600 pixels.</p>
+  </div>
+</div>
+	
+	
 </body>
 </html>
